@@ -1,0 +1,5 @@
+export const sceneThemes={
+ light:{background:0xf2f2f2,grid:0xd6d6d6,x:0xbc263b,y:0x177c43,z:0x245ccc,gold:0x8a5900,teal:0x087d75,muted:0x666666,link:0x777777,housing:0x999999,guide:0x666666,cap:0xd0d0d0,index:0x292929},
+ black:{background:0x0b0b0b,grid:0x252525,x:0xff7b85,y:0x64db93,z:0x8eb5ff,gold:0xf5c25b,teal:0x6edbd0,muted:0xaaaaaa,link:0x999999,housing:0x9c9c9c,guide:0x777777,cap:0xd0d0d0,index:0x292929}
+} as const;
+export type SceneTheme=typeof sceneThemes.light|typeof sceneThemes.black;

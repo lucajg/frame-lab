@@ -1,0 +1,7 @@
+<robot name="Imported teaching arm">
+<link name="base"/><link name="arm"><visual><geometry><mesh filename="package://missing/arm.stl"/></geometry></visual></link><link name="wrist"/><link name="tool"/><link name="sensor"/>
+<joint name="shoulder" type="revolute"><parent link="base"/><child link="arm"/><origin xyz="0 0 0.4"/><axis xyz="0 0 1"/><limit lower="-1" upper="2" effort="10" velocity="1"/></joint>
+<joint name="slide" type="prismatic"><parent link="arm"/><child link="wrist"/><origin xyz="1 0 0.2" rpy="0.2 0.4 -0.3"/><axis xyz="0 1 0"/><limit lower="0.1" upper="0.8" effort="10" velocity="1"/></joint>
+<joint name="adapter" type="fixed"><parent link="wrist"/><child link="tool"/><origin xyz="0.4 0.1 0.2" rpy="0.3 0.2 -0.1"/></joint>
+<joint name="sensor_mount" type="fixed"><parent link="base"/><child link="sensor"/></joint>
+</robot>
